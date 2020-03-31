@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
@@ -27,6 +28,13 @@ class _StoryPageState extends State<StoryPage> {
         //TODO: Step 1 - Add background.png to this Container as a background image.
         padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
         constraints: BoxConstraints.expand(),
+        decoration: new BoxDecoration(
+          image: DecorationImage(
+            image: new AssetImage(
+                'images/background.png'),
+            fit: BoxFit.fill,
+          )
+        ),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
